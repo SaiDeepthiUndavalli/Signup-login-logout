@@ -22,15 +22,15 @@ const Signup = () => {
     const register=()=>{
         const {name,email,password,reEnterPassword}=user
         if(name && email && password &&(password===reEnterPassword)){
-            axios.post("http://localhost:3000/register",user)
-            .then(res=>{
+            //axios.post("http://localhost:3000/register",user)
+            //.then(res=>{
                 alert("Resgistration Successfull")
                 navigate("/login")
-            })
-            .catch(err=> {console.log(err)
-                alert("Please provide valid details!")
-            }
-            )
+            //})
+            //.catch(err=> {console.log(err)
+            //    alert("Please provide valid details!")
+            //}
+           // )
         }else{
             alert("invalid input")
         }
