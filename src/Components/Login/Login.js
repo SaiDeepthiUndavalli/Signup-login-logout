@@ -20,12 +20,9 @@ const Login = ({setLoginUser}) => {
           axios.post("http://localhost:9002/login",user)
           .then(res=>{
               console.log(res)
-             
+              alert(res.data.message)
               setLoginUser(res.data.user)
-              if(res.data === "Success"){
-              
               navigate("/")
-              }
           })
           .catch(err=> {console.log(err)
             alert("No data found! Please register")
